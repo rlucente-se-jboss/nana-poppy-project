@@ -70,8 +70,10 @@ def main():
 
         while True:
             board.button.wait_for_press()
+            board.led.state = Led.BLINK
             generate_messages()
             assistant.conversation()
+            board.led.state = Led.OFF
 
 def generate_date_msg(now, p):
     msg = ['good']
