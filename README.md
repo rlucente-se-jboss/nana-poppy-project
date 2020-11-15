@@ -10,7 +10,8 @@ Open Weather Map API wrapper and the inflect project.
     pip3 install inflect pyowm
 
 Copy the contents of this repository to /home/pi on the Raspberry
-Pi.
+Pi. The `assistant.json` file should match your Google Assistant
+API credentials and ids.
 
 ## Configure Raspberry Pi
 At a minimum, you'll need to set the timezone and WiFi networking
