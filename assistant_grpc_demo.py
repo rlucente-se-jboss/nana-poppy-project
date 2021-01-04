@@ -129,9 +129,9 @@ def generate_time_msg(now, p):
 def generate_temp_msg(owm_mgr, location, p):
     msg = ['the_current_temperature_for', location, 'is']
 
-    # location is lowercase with underscore instead of spaces.
+    # location has underscore instead of spaces.
     # Convert to format for use with OpenWeatherMap API
-    city = location.replace('_', ' ').title() + ', US'
+    city = location.replace('_', ' ') + ',US'
     try:
         # get current temperature in fahrenheit for location
         obs = owm_mgr.weather_at_place(city)
@@ -160,8 +160,8 @@ def generate_messages():
     owm = pyowm.OWM('YOUR-OPEN-WEATHER-MANAGER-API-KEY')
     mgr = owm.weather_manager()
 
-    greeting3 = generate_temp_msg(mgr, 'waynesboro', p)
-    greeting4 = generate_temp_msg(mgr, 'ocean_city', p)
+    greeting3 = generate_temp_msg(mgr, 'Waynesboro,PA', p)
+    greeting4 = generate_temp_msg(mgr, 'Ocean_City,MD', p)
 
     children = ['child1', 'child2']
     random.shuffle(children)

@@ -7,8 +7,8 @@ nana_and_poppy
 the_time
 today
 the_current_temperature_for
-waynesboro,_md
-ocean_city,_md
+Waynesboro,PA
+Ocean_City,MD
 is
 and
 degrees
